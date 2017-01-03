@@ -1,0 +1,37 @@
+Recap:
+------
+Scripts (automating the command prompt), functions, flow control.
+Efficiency:
+	vectorisation
+	column-wise ordering
+	use built-in functions
+	pre-allocate arrays
+	pointer to Cambridge efficiency pages
+
+How-to:
+--------
+Load data from a directory of text files using a loop
+Process data in the workspace:
+	extract sub-sets of data
+	basic statistics
+	remove bad data points (spikes, drop-outs, implausible values)
+Save plots to disk
+Modify trace appearance using handles or right click on trace in figure
+	file/generate code to get script for existing figure
+Average data onto new time base for comparision
+Debugging demo:
+	break points
+	evaluate small sections at a time
+	version control revert
+
+Tips:
+-----
+Load data window remains open after loading data (looks like nothing has happened if maximised)
+Close MATLAB - no prompt to save workspace variables; only modified scripts
+
+
+Good practice:
+--------------
+Comments
+Assertions
+
