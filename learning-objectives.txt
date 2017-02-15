@@ -16,6 +16,7 @@ Process data in the workspace:
 	basic statistics
 	remove bad data points (spikes, drop-outs, implausible values)
 Save plots to disk
+Import screenshot of a graph from a paper, then plot your data on top
 Modify trace appearance using handles or right click on trace in figure
 	file/generate code to get script for existing figure
 Average data onto new time base for comparision
