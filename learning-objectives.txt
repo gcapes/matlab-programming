@@ -1,5 +1,6 @@
 Recap:
 ------
+Number types, and automatic, silent type casting
 Scripts (automating the command prompt), functions, flow control.
 Efficiency:
 	vectorisation
@@ -25,8 +26,8 @@ Debugging demo:
 	evaluate small sections at a time
 	version control revert
 
-Tips:
------
+Tips and common problems:
+------------------------
 Load data window remains open after loading data (looks like nothing has happened if maximised)
 Close MATLAB - no prompt to save workspace variables; only modified scripts
 
