@@ -10,6 +10,8 @@ or equivalent in your browser's address bar.
 
 ---
 
+# Learning objectives
+
 Recap:
 ------
 Number types, and automatic, silent type casting
