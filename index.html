@@ -112,11 +112,11 @@ class(a) % Returns class of variable 'a'.
 ```
 intmax('uint8')          % Returns max value of 8-bit integer
 intmax = intmax('uint8') % Create variable 'intmax'
-% This has now blocked access to the 'intmax' function
-intmax('uint8')          % Returns an error
+% This blocks access to the 'intmax' function
+intmax('uint8')          % Now returns an error
 ```
-- Names must start with a letter. Chose descriptive names which don't mask
-built-in functions
+- Names must start with a letter
+- Chose descriptive names which don't mask built-in functions
 - Demo
 ---
 ## Scripts and functions
