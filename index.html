@@ -53,10 +53,13 @@ class: center, middle
 5. Tips and common problems
 
 ---
+
 class: center,  middle
 
 ## Recap
+
 ---
+
 ## MATLAB GUI
 - Command window
 	- Type commands for immediate execution
@@ -69,6 +72,7 @@ class: center,  middle
 ```
 >> myscript % runs the file called myscript.m
 ```
+
 ---
 
 ## Number types
@@ -94,7 +98,9 @@ intmax('uint8')    % max value that uint8 can store = 2^8 -1
 a = uint8(300)     % a = 255 (300 truncated to max value) 
 b = 2.3 + 1e6 + a  % b = 255 (b is uint8)
 ```
+
 ---
+
 ## Variables
 
 - Used to store values
@@ -118,7 +124,9 @@ intmax('uint8')          % Now returns an error
 - Names must start with a letter
 - Chose descriptive names which don't mask built-in functions
 - Demo
+
 ---
+
 ## Scripts and functions
 
 - **Scripts** are like automating the command window
@@ -135,11 +143,16 @@ intmax('uint8')          % Now returns an error
 - A `.m` file can only be run if it is on the MATLAB `path` (list of directories to search)
 - Both scripts and functions are very helpful in terms of reproducibility
 - Demo
+
 ---
+
 class: center,  middle
+
 ## Worked examples
 ### (Writing scripts and functions)
+
 ---
+
 ## Import CO2 data from text files
 
 - Load a file using the GUI to select:
@@ -157,12 +170,15 @@ class: center,  middle
 	- line of best fit (tools > basic fitting) doesn't work with `datetime` format
 	- plot doesn't update if data is modified
 ---
+
 ## Process data
 - Remove bad data values using:
 	- command line
 	- script
 	- function
+
 ---
+
 ## Other data structures
 - Everything in MATLAB is a matrix
 	- strings, scalar variables, vectors, matrices
@@ -170,14 +186,21 @@ class: center,  middle
 	- Cell arrays for flexible data storage of multiple data types
 	- Structures for named fields containing values
 - Structure field names can be dynamically assigned using strings
+
 ---
+
 - Average data for comparison with other data sets
 	- assertions
 - List files in a directory with `dir` and load data in a loop
+
 ---
+
 class: center,  middle
+
 ## Debugging
+
 ---
+
 ## Approaches
 - Know what outcome you are expecting
 - Evaluate small sections of code at a time (one function, one line, one command)
@@ -186,11 +209,14 @@ class: center,  middle
 	- Write down what you're trying to do
 	- What are the steps to reproduce the problem?
 	- Very often the process of explaining the problem leads you to the error
+
 ---
+
 ## Tips and common problems
 - Load data window remains open after loading data (looks like nothing has happened if maximised)
 - Close MATLAB - no prompt to save workspace variables; only modified scripts
 - Variables are implicitly declared so easy to accidentally overwrite
+
 </textarea>
 <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
 </script>
