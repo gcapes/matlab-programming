@@ -121,16 +121,17 @@ intmax('uint8')          % Now returns an error
 ---
 ## Scripts and functions
 
-- Scripts are like automating the command window
+- **Scripts** are like automating the command window
 	- Have access to variables in the workspace
 	- Variables persist after script execution
-- Functions have their own scope
+- **Functions** have their own scope
 	- Cannot directly access variables in the workspace or other functions
 	- Can only use variables from the workspace if passed in as arguments
 	- Variables created in a function do not persist after execution
 	(unless returned as output arguments)
-- Run a script or function using the name of the file in the command window
+- Run a script or function using the **name of the file** in the command window
 (or another script/function)
+- To avoid confusion, ensure the filename matches the function name
 - A `.m` file can only be run if it is on the MATLAB `path` (list of directories to search)
 - Both scripts and functions are very helpful in terms of reproducibility
 - Demo
