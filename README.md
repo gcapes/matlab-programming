@@ -1,3 +1,15 @@
+# matlab-programming
+Programming in MATLAB (worked examples)
+
+---
+
+To view the [slideshow], you will need to *load unsafe scripts* by clicking on the shield icon
+or equivalent in your browser's address bar.
+
+[slideshow]: https://gcapes.github.io/matlab-programming/
+
+---
+
 Recap:
 ------
 Number types, and automatic, silent type casting
@@ -11,6 +23,10 @@ Efficiency:
 
 How-to:
 --------
+Write your own scripts and functions
+	- Flowcharts
+	- pseudo-code
+	- explain your intentions using comments
 Load data from a directory of text files using a loop
 Process data in the workspace:
 	extract sub-sets of data
