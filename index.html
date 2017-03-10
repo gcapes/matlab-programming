@@ -100,7 +100,32 @@ a = uint8(300)     % a = 255 (300 truncated to max value)
 b = 2.3 + 1e6 + a  % b = 255 (b is uint8)
 ```
 ---
-# Scripts and functions
+## Variables
+
+- Used to store values
+- Created implicitly
+```
+a = 23   % Assign value 23 to a variable, a.
+             % If 'a' doesn't already exist it will be created.
+             % If 'a' already exists, it will be overwritten.
+class(a) % Returns class of variable 'a'.
+```
+- Numeric variables are of `class` double by default
+	- must explicitly create other numeric types if required
+- MATLAB doesn't prevent you from using built-in MATLAB keywords
+	- Can 'overwrite' MATLAB function names very easily
+```
+intmax('uint8')          % Returns max value of 8-bit integer
+intmax = intmax('uint8') % Create variable 'intmax'
+% This has now blocked access to the 'intmax' function
+intmax('uint8')          % Returns an error
+```
+- Names must start with a letter. Chose descriptive names which don't mask
+built-in functions
+- Demo
+---
+## Scripts and functions
+
 - Scripts are like automating the command window
 	- Have access to variables in the workspace
 	- Variables persist after script execution
