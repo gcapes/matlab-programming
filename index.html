@@ -125,7 +125,7 @@ built-in functions
 	- Have access to variables in the workspace
 	- Variables persist after script execution
 - Functions have their own scope
-	- Cannot directly access variables in the workspace
+	- Cannot directly access variables in the workspace or other functions
 	- Can only use variables from the workspace if passed in as arguments
 	- Variables created in a function do not persist after execution
 	(unless returned as output arguments)
@@ -156,14 +156,40 @@ class: center,  middle
 	- line of best fit (tools > basic fitting) doesn't work with `datetime` format
 	- plot doesn't update if data is modified
 ---
-# Process data
+## Process data
 - Remove bad data values using:
 	- command line
 	- script
 	- function
+---
+## Other data structures
+- Everything in MATLAB is a matrix
+	- strings, scalar variables, vectors, matrices
+- These can be grouped using data structures
+	- Cell arrays for flexible data storage of multiple data types
+	- Structures for named fields containing values
+- Structure field names can be dynamically assigned using strings
+---
 - Average data for comparison with other data sets
 	- assertions
+- List files in a directory with `dir` and load data in a loop
 ---
+class: center,  middle
+## Debugging
+---
+## Approaches
+- Know what outcome you are expecting
+- Evaluate small sections of code at a time (one function, one line, one command)
+- Using intermediate variables in loops can sometimes help debugging
+- Explain the problem to someone else:
+	- Write down what you're trying to do
+	- What are the steps to reproduce the problem?
+	- Very often the process of explaining the problem leads you to the error
+---
+## Tips and common problems
+- Load data window remains open after loading data (looks like nothing has happened if maximised)
+- Close MATLAB - no prompt to save workspace variables; only modified scripts
+- Variables are implicitly declared so easy to accidentally overwrite
 </textarea>
 <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
 </script>
