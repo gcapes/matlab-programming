@@ -200,8 +200,24 @@ Data from NOAA [CO2], [temperature], [metadata for temperature][metadata]
 	- strings, scalar variables, vectors, matrices
 - These can be grouped using data structures
 	- Cell arrays for flexible data storage of multiple data types
+```
+>> myCell = {1,2,3,4;'example',rand(3,3,2),[3,2,1],{5,6,7}}
+>> myCell{2,1}
+ans = 
+example
+```
 	- Structures for named fields containing values
+```
+>> myStruct.name='My first structure';
+>> myStruct.data=ones(10)
+myStruct = 
+    name: 'My first structure'
+    data: [10x10 double]
+```
 - Structure field names can be dynamically assigned using strings
+```
+myStruct.('demo') = 'Like this!'
+```
 
 ---
 
