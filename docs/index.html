@@ -86,7 +86,7 @@ class: center,  middle
 - Default data type in MATLAB is double (i.e. double precision:
   approx 16 significant decimal digits)
 - Be aware of the maximum and minimum values that can be stored by a given
-  number type 
+  number type
   ```
   intmax('uint16')   % max value for an unsigned 16-bit integer
   realmin('single')  % minimum value for single precision floating point
@@ -95,7 +95,7 @@ class: center,  middle
 - MATLAB performs automatic type casting (without warning)
 ```
 intmax('uint8')    % max value that uint8 can store = 2^8 -1
-a = uint8(300)     % a = 255 (300 truncated to max value) 
+a = uint8(300)     % a = 255 (300 truncated to max value)
 b = 2.3 + 1e6 + a  % b = 255 (b is uint8)
 ```
 
@@ -156,7 +156,7 @@ class: center,  middle
 ## Import CO2 data from text files
 
 Data from NOAA [CO2], [temperature], [metadata for temperature][metadata]
-- Load a file using the GUI to select:
+- Load a [data file] using the GUI to select:
 	- starting row
 	- specific columns
 	- data format
@@ -171,6 +171,7 @@ Data from NOAA [CO2], [temperature], [metadata for temperature][metadata]
 	- line of best fit (tools > basic fitting) doesn't work with `datetime` format
 	- plot doesn't update if data is modified
 
+[data file]: ../data/co2_weekly_mlo.txt
 [CO2]: https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html
 [temperature]: https://www.esrl.noaa.gov/gmd/dv/data/?parameter_name=Meteorology&site=MLO&category=Meteorology&frequency=Hourly%2BAverages
 [metadata]: ftp://aftp.cmdl.noaa.gov/data/meteorology/in-situ/README
