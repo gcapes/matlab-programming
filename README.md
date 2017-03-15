@@ -3,13 +3,6 @@ Programming in MATLAB (worked examples)
 
 ---
 
-To view the [slideshow], you will need to *load unsafe scripts* by clicking on the shield icon
-or equivalent in your browser's address bar.
-
-[slideshow]: https://gcapes.github.io/matlab-programming/
-
----
-
 # Learning objectives
 
 Recap:
