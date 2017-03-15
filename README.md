@@ -3,12 +3,8 @@ Programming in MATLAB (worked examples)
 
 ---
 
-[Click here][slideshow] for the course slides.
-If they do not display correctly, you will need to *load unsafe scripts* by
-clicking on the shield icon or equivalent in your browser's address bar
-(see below).
-
-![How to load slideshow on Chromium](load_slideshow.png)
+To view the [slideshow], you will need to *load unsafe scripts* by clicking on the shield icon
+or equivalent in your browser's address bar.
 
 [slideshow]: https://gcapes.github.io/matlab-programming/
 
