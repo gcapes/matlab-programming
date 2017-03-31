@@ -235,9 +235,46 @@ and an example of how to use it
 - Pay attention to the coloured flags on the right edge of the editor window
 	- Read the suggestions to improve the efficiency of your code
 
+---
+## Example functions (demo / exercise)
+1. Load a folder of data files into MATLAB, creating one time series per variable
+(rather than one per file)
+2. Process data, removing bad data points, creating monthly averages for
+comparision with other data sets
+---
+
+### 1. Pseudo-code to load directory of data files
+- loop through files in directory
+- load data using separate function
+	- generate function from import data tool
+	- modify import data function to automatically generate variable names
+- combine data from files into one array
+
+### Order of tasks
+- generate function to load one data file using *import data* tool
+	- start with a simplified task
+- modify import data function to automatically generate variable names
+	- use a structure
+- loop through files in directory
+	- initially just print file names to test loop works correctly
+- load data by calling a separate *loader* function
+- combine data from files into one array
+- ensure the code is adequately commented
+
+---
+### Problems encountered (and solutions)
+- Can't dynamically assign variable names in MATLAB
+	- Modify function to output a structure
+- Output argument overwrites variables in workspace
+	- Pass in variable to function, modify, then pass it back out
+- Can only pass in a variable which exists
+	- Create empty variable before first function call
+
+---
+### 2. Pseudo code to process data
 - Average data for comparison with other data sets
 	- assertions
-- List files in a directory with `dir` and load data in a loop
+
 
 ---
 
