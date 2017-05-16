@@ -56,7 +56,7 @@ class: center, middle
 
 class: center,  middle
 
-## Recap
+## 1. Recap
 
 ---
 
@@ -148,25 +148,26 @@ intmax('uint8')          % Now returns an error
 
 class: center,  middle
 
-## Worked examples
+## 2. Worked examples
 ### (Writing scripts and functions)
 
 ---
 
-## Import CO2 data from text files
+## Import CO<sub>2</sub> data from text files
 
 (Data from NOAA: [CO2], [temperature], [metadata for temperature][metadata])
-- Load a [data file] using the GUI to select:
+- Load the CO<sub>2</sub> [data file] (data/co2_weekly_mlo.txt), using the **Import Data** tool to select:
+	- column delimiters
+	- treatment of repeated delimiters
 	- starting row
 	- specific columns
 	- data format
 	- variable names
-	- column delimiters
-	- multiple delimiters
 - Tips:
 	- import window remains open
 	- save the code as a script for future use
-	- use `datetime` format for time series
+	- use the `datetime` function to create a time series
+	- [Example of final script](code/co2_load.m)
 - Plot graph
 	- line of best fit (tools > basic fitting) doesn't work with `datetime` format
 	- plot doesn't update if data is modified
@@ -175,12 +176,13 @@ class: center,  middle
 [CO2]: https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html
 [temperature]: https://www.esrl.noaa.gov/gmd/dv/data/?parameter_name=Meteorology&site=MLO&category=Meteorology&frequency=Hourly%2BAverages
 [metadata]: ftp://aftp.cmdl.noaa.gov/data/meteorology/in-situ/README
+
 ---
 
-## Process CO2 data
+## Process CO<sub>2</sub> data
 - Remove bad data values using:
 	- command line
-	- script
+	- [script]
 	- function
 - This is one way to build up functions
 	1. test ideas in the command window
@@ -190,12 +192,14 @@ class: center,  middle
 		- Pass in variables
 		- Pass out results
 		- Comment your code (and ensure it works with `lookfor` and `help`)
-- Demo using CO2 data
-- Final function: [badtonan.m](code/badtonan.m)
+- Demo using CO<sub>2</sub> data
+- Final function: [badtonan.m]
 
+[script]: code/co2_clean.m
+[badtonan.m]: code/badtonan.m
 ---
 
-## Other data structures
+## Data structures
 - Everything in MATLAB is a matrix
 	- strings, scalar variables, vectors, matrices
 - These can be grouped using data structures
@@ -239,7 +243,7 @@ and an example of how to use it
 ## Example functions (demo/exercise)
 1. Load a folder of data files into MATLAB, creating one time series per variable
 (rather than one per file)
-2. Process data, removing bad data points, creating (monthly) averages for
+2. Clean data (remove bad data points) and create (monthly) averages for
 comparision with other data sets
 3. Interrogate subsets of data to look at monthly / yearly variability
 4. Calculate basic statistics
@@ -250,12 +254,15 @@ comparision with other data sets
 	- clean up original image before adding your data
 ---
 
-### 1. Pseudo-code to load directory of data files
+### 1. Load a directory of data files
+### Pseudo-code 
 - loop through files in directory
 - load data using separate function
 	- generate function from import data tool
 	- modify import data function to automatically generate variable names
 - combine data from files into one array
+
+---
 
 ### Order of tasks
 - generate function to load one data file using *import data* tool
