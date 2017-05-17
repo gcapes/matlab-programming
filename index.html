@@ -197,37 +197,14 @@ class: center,  middle
 
 [script]: code/co2_clean.m
 [badtonan.m]: code/badtonan.m
----
-
-## Data structures
-- Everything in MATLAB is a matrix
-	- strings, scalar variables, vectors, matrices
-- These can be grouped using data structures
-	- Cell arrays for flexible data storage of multiple data types
-```
->> myCell = {1,2,3,4;'example',rand(3,3,2),[3,2,1],{5,6,7}}
->> myCell{2,1}
-ans = 
-example
-```
-	- Structures for named fields containing values
-```
->> myStruct.name='My first structure';
->> myStruct.data=ones(10)
-myStruct = 
-    name: 'My first structure'
-    data: [10x10 double]
-```
-- Structure field names can be dynamically assigned using strings
-```
-myStruct.('demo') = 'Like this!'
-```
 
 ---
+
 ## A method for writing functions
 
 - Write pseudo-code to split your ideas into discrete tasks
 - Start with a simplified task and progressively build up complexity
+- Test ideas in the command window (or a script) first
 - Split separate tasks into their own functions
 	- Makes functions more reusable
 	- Easier to write and debug
@@ -252,10 +229,10 @@ comparision with other data sets
 5. Repeat for a different data set (global average surface temperature)
 8. Import screenshot from paper, plot your data on top
 	- clean up original image before adding your data
----
 
-### 1. Load a directory of data files
-### Pseudo-code 
+---
+## 1. Load a directory of data files
+## Pseudo-code
 - loop through files in directory
 - load data using separate function
 	- generate function from import data tool
@@ -263,10 +240,10 @@ comparision with other data sets
 - combine data from files into one array
 
 ---
-
-### Order of tasks
-- generate function to load one data file using *import data* tool
+## Order of tasks
+- generate function to load a single data file using *import data* tool
 	- start with a simplified task
+	- refer to data/met_README for data format
 - modify import data function to automatically generate variable names
 	- use a structure
 - loop through files in directory
@@ -274,6 +251,31 @@ comparision with other data sets
 - load data by calling the separate *loader* function
 - combine data from files into one array
 - ensure the code is adequately commented
+
+---
+## Data structures
+- Everything in MATLAB is a matrix
+	- strings, scalar variables, vectors, matrices
+- These can be grouped using data structures
+	- Cell arrays for flexible data storage of multiple data types
+```
+>> myCell = {1,2,3,4;'example',rand(3,3,2),[3,2,1],{5,6,7}}
+>> myCell{2,1}
+ans =
+example
+```
+	- Structures for named fields containing values
+```
+>> myStruct.name='My first structure';
+>> myStruct.data=ones(10)
+myStruct =
+    name: 'My first structure'
+    data: [10x10 double]
+```
+- Structure field names can be dynamically assigned using strings
+```
+myStruct.('demo') = 'Like this!'
+```
 
 ---
 ### Problems encountered (and solutions)
