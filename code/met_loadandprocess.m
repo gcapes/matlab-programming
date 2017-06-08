@@ -1,3 +1,8 @@
+% Load and process Met data
+
+% Save current directory
+startdir=pwd;
+
 % Set directory for met data loader
 cd('/home/mbexegc2/Dropbox (The University of Manchester)/rit-training/course-material/matlab/matlab-programming/data/') 
 
@@ -12,3 +17,6 @@ met.Temperature = badtonan(met.Temperature,-900);
 
 % Create timeseries array within met structure array
 met.t = datetime(met.Year,met.Month,met.Day,met.Hour,0,0);
+
+% Return to original directory
+cd(startdir)
