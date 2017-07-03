@@ -287,6 +287,10 @@ myStruct.('demo') = 'Like this!'
 - Can only pass in a variable which exists
 	- Create empty variable before first function call
 
+### Solutions
+- [Function](code/met_importfile.m) to load a single met file
+- [Function](code/met_loadfolder.m) to load a directory of files
+
 ---
 ### 2. Pseudo code to process data
 - Combine structure rows to get one array per field
@@ -294,6 +298,13 @@ myStruct.('demo') = 'Like this!'
 	- loop over fields, combining data
 - Remove bad data points using previously written function
 
+### Solutions
+- [Function](code/combinestructcols.m) to combine columns in a structure array
+- [Script](code/met_loadandprocess.m) to automate the tasks so far:
+	- load directory of files
+	- combine columns
+	- remove bad data points
+---
 
 ### 3. Create monthly averages
 Average data over user-specified intervals for comparison with other data sets
