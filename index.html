@@ -155,7 +155,6 @@ class: center,  middle
 
 ## Import CO<sub>2</sub> data from text files
 
-(Data from NOAA: [CO2], [temperature], [metadata for temperature][metadata])
 - Load the CO<sub>2</sub> [data file] (data/co2_weekly_mlo.txt), using the **Import Data** tool to select:
 	- column delimiters
 	- treatment of repeated delimiters
@@ -171,6 +170,8 @@ class: center,  middle
 - Plot graph
 	- line of best fit (tools > basic fitting) doesn't work with `datetime` format
 	- plot doesn't update if data is modified
+
+(Data from NOAA: [CO2], [temperature], [metadata for temperature][metadata])
 
 [data file]: data/co2_weekly_mlo.txt
 [CO2]: https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html
@@ -220,14 +221,14 @@ and an example of how to use it
 ## Example functions (demo/exercise)
 1. Load a folder of data files into MATLAB, creating one time series per variable
 (rather than one per file)
-2. Clean data (remove bad data points) and create (monthly) averages for
-comparision with other data sets
-3. Interrogate subsets of data to look at monthly / yearly variability
-4. Calculate basic statistics
-4. Automate the whole work flow using a function, making some sections optional
-5. Check for overlap of data sets
-5. Repeat for a different data set (global average surface temperature)
-8. Import screenshot from paper, plot your data on top
+2. Script to automate the above, and clean the temperature data (remove bad data points)
+3. Create (monthly) averages for comparision with other data sets
+4. Interrogate subsets of data to look at monthly / yearly variability
+5. Calculate basic statistics
+6. Automate the whole work flow using a function, making some sections optional
+7. Check for overlap of data sets
+8. Repeat for a different data set (global average surface temperature)
+9. Import screenshot from paper, plot your data on top
 	- clean up original image before adding your data
 
 ---
@@ -248,14 +249,14 @@ comparision with other data sets
 	- use a structure
 - loop through files in directory
 	- initially just print file names to test loop works correctly
-- load data by calling the separate *loader* function
+	- load data by calling the separate *loader* function
 - combine data from files into one array
 - ensure the code is adequately commented
 
 ---
 ## Data structures
-- Everything in MATLAB is a matrix
-	- strings, scalar variables, vectors, matrices
+- MATLAB treats numeric data and strings as matrices
+	- e.g. `size('test'), size(int8(22))`
 - These can be grouped using data structures
 	- Cell arrays for flexible data storage of multiple data types
 ```
@@ -278,7 +279,7 @@ myStruct.('demo') = 'Like this!'
 ```
 
 ---
-### Problems encountered (and solutions)
+### Hints
 - Can't dynamically assign variable names in MATLAB
 	- Modify function to output a structure
 - Output argument overwrites variables in workspace
@@ -292,13 +293,15 @@ myStruct.('demo') = 'Like this!'
 	- get list of field names
 	- loop over fields, combining data
 - Remove bad data points using previously written function
-- Average data over user-specified intervals for comparison with other data sets
-	- create a `datetime` variable type from double type variables *year, month, day, hour*
-	- find required averaging intervals
-	- average data onto new time base, ignoring NaN values
+
+
+### 3. Create monthly averages
+Average data over user-specified intervals for comparison with other data sets
+- write a function to find time series overlap
+- create a `datetime` variable type from double type variables *year, month, day, hour*
+- find required averaging intervals
+- average data onto new time base, ignoring NaN values
 - Plot averaged data against CO2 data
-
-
 ---
 
 class: center,  middle
