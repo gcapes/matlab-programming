@@ -155,7 +155,7 @@ class: center,  middle
 
 ## Import CO<sub>2</sub> data from text files
 
-- Load the CO<sub>2</sub> [data file] (data/co2_weekly_mlo.txt), using the **Import Data** tool to select:
+- Load the CO<sub>2</sub> [data file] (`data/co2_weekly_mlo.txt`), using the `Import Data` tool to select:
 	- column delimiters
 	- treatment of repeated delimiters
 	- starting row
@@ -182,9 +182,9 @@ class: center,  middle
 
 ## Process CO<sub>2</sub> data
 - Remove bad data values using:
-	- command line
-	- [script]
-	- function
+	- the command line
+	- a [script]
+	- a function
 - This is one way to build up functions i.e.
 	1. test ideas in the command window
 	2. save previously executed command(s) in a script
@@ -238,22 +238,22 @@ and an example of how to use it
 ## Pseudo-code
 - loop through files in directory
 - load data using separate function
-	- generate function from import data tool
+	- generate data loader function from `import data` tool
 	- modify import data function to automatically generate variable names
 - combine data from files into one array
 
 ---
 ## Order of tasks
-- generate function to load a single data file using *import data* tool
-	- start with a simplified task
-	- refer to data/met_README for data format
-- modify import data function to automatically generate variable names
-	- use a structure
-- loop through files in directory
+1. generate function to load a single data file using `import data` tool
+	- i.e. start with a simplified task
+	- refer to `data/met_README` for explanation of the data format
+2. edit the file loader function (1.) to automatically generate variable names
+	- use a structure (see next slide)
+3. loop through files in directory
 	- initially just print file names to test loop works correctly
-	- load data by calling the separate *loader* function
-- combine data from files into one array
-- ensure the code is adequately commented
+	- load data by calling the separate file loader function
+4. combine data from files into one array
+5. ensure the code is adequately commented
 
 ---
 ## Data structures
