@@ -4,47 +4,53 @@ Programming in MATLAB (worked examples)
 ---
 
 # Learning objectives
+Learners should understand /  be able to:
 
-Recap:
-------
-Number types, and automatic, silent type casting
-Scripts (automating the command prompt), functions, flow control.
-Efficiency:
-	vectorisation
-	column-wise ordering
-	use built-in functions
-	pre-allocate arrays
-	pointer to Cambridge efficiency pages
+## Recap:
+- Understand different number types
+- Be aware of automatic (silent) type casting
+- Understand the purpose of scripts (automating the command prompt) and functions
+- Understand how to use flow control
 
-How-to:
---------
-Write your own scripts and functions
-	- Flowcharts
+## How-to:
+- Be able to write your own scripts and functions, by breaking problems down into steps using
+	- flowcharts
 	- pseudo-code
-	- explain your intentions using comments
-Load data from a directory of text files using a loop
-Process data in the workspace:
-	extract sub-sets of data
-	basic statistics
-	remove bad data points (spikes, drop-outs, implausible values)
-Save plots to disk
-Import screenshot of a graph from a paper, then plot your data on top
-Modify trace appearance using handles or right click on trace in figure
-	file/generate code to get script for existing figure
-Average data onto new time base for comparision
-Debugging demo:
-	break points
-	evaluate small sections at a time
-	version control revert
+	- comments to explain your intentions
+- Know how to load data from a directory of text files using a loop
+- Understand how to process data in the workspace:
+	- extract sub-sets of data
+	- basic statistics
+	- remove bad data points (spikes, drop-outs, implausible values)
+- Be able to save plots to disk
+- Be able to import a screenshot of a graph from a paper, then plot your data on top
+- Know how to modify trace appearance using handles or right click on trace in figure
+	- know how to `generate code` to get script for existing figure
+- Be able to average data onto new time base for comparision
+- Understand how to use the debugger to:
+	- set break points and inspect the value of variables
+	- evaluate small sections of code at a time
 
-Tips and common problems:
-------------------------
-Load data window remains open after loading data (looks like nothing has happened if maximised)
-Close MATLAB - no prompt to save workspace variables; only modified scripts
+## Tips and common problems:
+- Load data window remains open after loading data (looks like nothing has happened if maximised)
+- Close MATLAB - no prompt to save workspace variables; only modified scripts
 
 
-Good practice:
---------------
-Comments
-Assertions
+## Good practice:
+- Comments
+- Assertions
+- Version control
+- Coding style for readability
+	- indentation
+	- capital letters for matrices e.g. M, A
+	- varable naming conventions e.g. isLogical, camelCaseNames, loop variables
+- Be aware of techniques to improve efficiency:
+	- pre-allocate arrays
+	- vectorisation
+	- use built-in functions
+	- column-wise ordering
+	- further reading: [awesome-matlab], particularly [clean and fast] and [vectorisation]
 
+[awesome-matlab]: https://github.com/mikecroucher/awesome-MATLAB
+[clean and fast]: http://uk.mathworks.com/matlabcentral/fileexchange/22943-guidelines-for-writing-clean-and-fast-code-in-matlab
+[vectorisation]: http://www-h.eng.cam.ac.uk/help/tpl/programs/Matlab/tricks.html
