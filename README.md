@@ -4,7 +4,6 @@ Programming in MATLAB (worked examples)
 ---
 
 # Learning objectives
-Learners should understand /  be able to:
 
 ## Recap:
 - Understand different number types
@@ -25,7 +24,7 @@ Learners should understand /  be able to:
 - Be able to save plots to disk
 - Be able to import a screenshot of a graph from a paper, then plot your data on top
 - Know how to modify trace appearance using handles or right click on trace in figure
-	- know how to `generate code` to get script for existing figure
+	- know about `File > Generate code...` to get script for existing figure
 - Be able to average data onto new time base for comparision
 - Understand how to use the debugger to:
 	- set break points and inspect the value of variables
