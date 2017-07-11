@@ -306,18 +306,21 @@ myStruct.('demo') = 'Like this!'
 	- load directory of files
 	- combine columns
 	- remove bad data points
+	- create a `datetime` variable type from double type variables *year, month, day, hour*
 ---
 
 ### 3. Create monthly averages
-Average data over user-specified intervals for comparison with other data sets
-- write a function to find time series overlap
-- create a `datetime` variable type from double type variables *year, month, day, hour*
-- find required averaging intervals
-- average data onto new time base, ignoring NaN values
-- Plot averaged data against CO2 data
+Average (temperature and CO<sub>2</sub>) data over user-specified intervals for comparison with other data sets
+- write a function to find overlap between time series
+- create `datetime` arrays for the required averaging intervals
+- write a function to average data onto new time base, ignoring NaN values
+- visually confirm averaging has been done correctly
+- scatter plot averaged data against CO2 data
 
 ### Solutions
-- [Find time series overlap](code/find_overlap.m)
+- [Function](code/find_overlap.m) to find time series overlap
+- [Function](code/ts_average.m) to average data
+- [Script](code/monthly_averages.m) to run the above functions and plot the data
 ---
 
 class: center,  middle
