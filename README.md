@@ -3,6 +3,14 @@ Programming in MATLAB (worked examples)
 
 ---
 
+[Register for the course](https://app.manchester.ac.uk/rmatlabpro)
+
+[Leave feedback](https://goo.gl/forms/zfZyTLw4DDaySnCF3)
+
+Open the [slideshow](https://gcapes.github.io/matlab-programming/)
+
+---
+
 # Learning objectives
 
 ## Recap:
