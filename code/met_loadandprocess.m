@@ -4,7 +4,7 @@
 startdir=pwd;
 
 % Set directory for met data loader
-cd('/home/mbexegc2/Dropbox (The University of Manchester)/rit-training/course-material/matlab/matlab-programming/data/') 
+cd('/home/gerard/Dropbox (The University of Manchester)/rit-training/course-material/matlab/matlab-programming/data/')
 
 % load raw meteorology data from current directory
 raw_met_data = met_loadfolder('met_mlo*.txt');
