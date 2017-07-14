@@ -13,3 +13,7 @@ co2_t = datetime(year,month,day);
 
 % Plot time series
 plot(co2_t,co2ppm);
+ylabel('Concentration (ppm)');
+legend('CO_2','Location','NorthWest')
+xlabel('Date')
+title('CO_2 at Mauna Loa, Hawaii')
