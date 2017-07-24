@@ -121,8 +121,9 @@ intmax = intmax('uint8') % Create variable 'intmax'
 % This blocks access to the 'intmax' function
 intmax('uint8')          % Now returns an error
 ```
-- Names must start with a letter
+- Names must start with a letter: check a string using `isvarname`
 - Chose descriptive names which don't mask built-in functions
+	- use `exist` to check
 - Demo
 
 ---
@@ -163,6 +164,7 @@ class: center,  middle
 	- data format
 	- variable names
 - Tips:
+	- use `exist` and `isvarname` to help choose variable names
 	- import window remains open
 	- save the code as a script for future use
 	- use the `datetime` function to create a time series
