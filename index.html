@@ -343,12 +343,42 @@ class: center,  middle
 	- Write down what you're trying to do
 	- What are the steps to reproduce the problem?
 	- Very often the process of explaining the problem leads you to the error
+- Revert to previous, working version using [Version Control](https://app.manchester.ac.uk/rgit)
+- After fixing, add assertions to prevent recurrence
 
 ---
 
-## Examples
+## Example 1: Data "clipping"
+### Aim
+We want a script to find the average, sum, number of non-zero cells, and max value of each imported matrix. Then create a four column table showing these results.
 
-- typecasting error from email
+### The problem
+When the last step creates the matrix from the elements, any value above 65535 becomes 65535 (i.e. most of the sum and nnz values).
+
+How can we make it build the array without it changing these numbers?
+
+[The script](debug/clipping.m)
+
+---
+
+### Exercise (5 mins)
+- Try to debug the script
+- There are hints on the next slide if you get stuck
+- Tutor will then demo the process
+
+---
+
+## Example 1 worked solution
+
+- View matrix `A` to familiarise yourself with the problem
+- Set a break point and check the value, class, and size of variables before assignment of summary matrix
+- Check assignment of first row using the debugger command prompt `K>>`
+- Check class of the result
+- What happens if you construct a matrix using the first two values? Three? Four?
+- Hint: view recap slide on number types, and automatic typecasting
+
+[Solution](debug/clipping_solution.m)
+
 ---
 ## Tips and common problems
 - Load data window remains open after loading data (looks like nothing has happened if maximised)
