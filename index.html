@@ -348,6 +348,28 @@ class: center,  middle
 
 ---
 
+## Features of the debugger
+
+- Breakpoints (click on the `-` next to the line number to get a red dot)
+	- code will pause execution at this point
+	- can then run code
+		- one line at a time at current level (step)
+		- one line at a time, entering sub-functions (step in)
+		- exit out of a function into parent (step out)
+		- until cursor position (run to cursor)
+		- to the end, or next break point (continue)
+	- while paused, you can check
+		- values, size, and class of variables
+		- logic of conditionals
+- Conditional breakpoints (as above, but only halt code when condition is met)
+- Hover mouse cursor over variables - size, class and values are shown
+- Evaluate expressions at the debugger command prompt `K>>`
+- Open (view) variables	in the workspace
+- Plot variables (link the plot) for visual debugging
+- Override value of variables in scripts and functions
+
+---
+
 ## Example 1: Data "clipping"
 ### Aim
 We want a script to find the average, sum, number of non-zero cells, and max value of each imported matrix. Then create a four column table showing these results.
