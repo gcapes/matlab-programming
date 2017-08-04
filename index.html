@@ -440,6 +440,23 @@ The last data point doesn't get sorted.
 - use vector operations instead of loops (when possible) 
 - use profiler to identify hotspots in code
 ---
+
+##Efficiency example 1
+
+[Inefficient assignment with loops](code/loopy.m)
+
+- Look at advice from `mlint` (down the side of the editor window)
+- Use the profiler (`Run and time` button) to identify expensive code sections
+- Implement suggestions from `mlint`
+- Re-run profiler and admire the speed up from preallocating arrays
+- Examine the most time consuming lines in the profile report
+- Rewrite the variable assignments using vector operations instead of loops
+	- It may help to write a comment for each line in the loops, explaining what it does
+
+[Solution](code/loopy_solution.m)
+
+---
+
 ## Feedback / attendance
 
 Please complete the [feedback form].
