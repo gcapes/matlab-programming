@@ -434,16 +434,24 @@ The last data point doesn't get sorted.
 - Variables are implicitly declared so easy to accidentally overwrite
 
 ---
-## Efficiency
-- mlint checks for syntax errors and gives tips to improve functions and scripts
+## Efficiency tips
+- `mlint` checks for syntax errors and gives tips to improve functions and scripts
+	- Let MATLAB help you!
 - MATLAB stores arrays contiguously in memory, but augments them dynamically
 	- preallocate arrays wherever possible, instead of growing on the fly
 	- access consecutive elements using column-major indexing
-- use vector operations instead of loops (when possible)
+- Use vector operations instead of loops (when possible)
 	- work on all elements simultaneously
-- use the profiler to identify hotspots in code
+- Use built-in functions instead of writing your own
+- Use the profiler to identify hotspots in code
+- Many more tips at [Awesome MATLAB], particularly [clean and fast] and [vectorisation]
 
-[Examples](code/efficiency_examples.m)
+[Efficiency demo](code/efficiency_examples.m)
+
+[Awesome MATLAB]: https://github.com/mikecroucher/awesome-MATLAB
+[clean and fast]: http://uk.mathworks.com/matlabcentral/fileexchange/22943-guidelines-for-writing-clean-and-fast-code-in-matlab
+[vectorisation]: http://www-h.eng.cam.ac.uk/help/tpl/programs/Matlab/tricks.html
+
 ---
 
 ## Efficiency example
