@@ -385,7 +385,7 @@ How can we make it build the array without it changing these numbers?
 
 ---
 
-### Exercise (5 mins)
+## Exercise (5 mins)
 - Try to debug the script
 - There are hints on the next slide if you get stuck
 - Tutor will then demo the process
@@ -416,7 +416,7 @@ The last data point doesn't get sorted.
 
 ---
 
-# Example 2: worked solution
+## Example 2: worked solution
 - Run the function once to view the problem
 - Plot a graph of the output variable (the "sorted" data)
 - Link the plot so that it updates when the data updates
@@ -436,12 +436,17 @@ The last data point doesn't get sorted.
 ---
 ## Efficiency
 - mlint checks for syntax errors and gives tips to improve functions and scripts
-- preallocate arrays wherever possible
-- use vector operations instead of loops (when possible) 
-- use profiler to identify hotspots in code
+- MATLAB stores arrays contiguously in memory, but augments them dynamically
+	- preallocate arrays wherever possible, instead of growing on the fly
+	- access consecutive elements using column-major indexing
+- use vector operations instead of loops (when possible)
+	- work on all elements simultaneously
+- use the profiler to identify hotspots in code
+
+[Examples](code/efficiency_examples.m)
 ---
 
-##Efficiency example 1
+## Efficiency example
 
 [Inefficient assignment with loops](code/loopy.m)
 
@@ -452,6 +457,7 @@ The last data point doesn't get sorted.
 - Examine the most time consuming lines in the profile report
 - Rewrite the variable assignments using vector operations instead of loops
 	- It may help to write a comment for each line in the loop, explaining what it does
+- Consider how you will check that your modifications give the same answers as the original code
 
 [Solution](code/loopy_solution.m)
 
