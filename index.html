@@ -142,6 +142,37 @@ intmax('uint8')          % Now returns an error
 
 ---
 
+## Flow control (making decisions)
+
+- Choose different paths through your code using conditional statements
+	- The first true expression will run
+
+```
+if x > 0.5
+	disp('x is greater than 0.5')
+else if x > 0.9
+	% This cannot be the first true expression, so will never run.
+	disp('x is greater than 0.9')
+else
+	disp('Neither of the conditions above were met')
+end
+```
+
+- Repeat commands using loops
+	- `for` loops are generally used when you know how many iterations are required
+	- `while` loops continue until an expression is false
+
+```
+for i =  1:10    % We know in advance that we want 10 iterations
+	disp(i^2)
+end
+
+while k          % We don't know how many iterations we need
+	k = k / 21
+end
+```
+---
+
 class: center,  middle
 
 # 2. Scripts and functions
