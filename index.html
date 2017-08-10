@@ -35,22 +35,17 @@ class: center, middle
 1. Recap of online lessons
 	- Number types and automatic casting
 	- Scripts and Functions
-3. Worked examples of common tasks
+	- Flow control
+2. How to write your own scripts and functions (worked examples)
 	- Loading data into MATLAB
 	- Processing data in the workspace
 		- Extract sub-sets of data, basic statistics,
 		filtering bad data points
 	- Basic plotting
-3. How to write your own scripts and functions
-4. Debugging demo
-	- break points
-	- evaluate small sections at a time
-	- version control revert
+3. Debugging
 4. Good programming practice
-	- Comments
-	- Assertions
-	- Version control
-5. Tips and common problems
+5. Efficiency
+6. Tips and common problems
 
 ---
 
@@ -149,8 +144,8 @@ intmax('uint8')          % Now returns an error
 
 class: center,  middle
 
-# 2. Worked examples
-## (Writing scripts and functions)
+# 2. Scripts and functions
+## (Worked examples )
 
 ---
 
@@ -331,7 +326,7 @@ Average (temperature and CO<sub>2</sub>) data over user-specified intervals for 
 
 class: center,  middle
 
-# Debugging
+# 3. Debugging
 
 ---
 
@@ -432,8 +427,18 @@ The last data point doesn't get sorted.
 - Load data window remains open after loading data (looks like nothing has happened if maximised)
 - Close MATLAB - no prompt to save workspace variables; only modified scripts
 - Variables are implicitly declared so easy to accidentally overwrite
+- Lots of tips, advice, learning resources etc at [Awesome MATLAB]
+
+[Awesome MATLAB]: https://github.com/mikecroucher/awesome-MATLAB
 
 ---
+
+class: center,  middle
+
+# 5. Efficiency
+
+---
+
 ## Efficiency tips
 - `mlint` checks for syntax errors and gives tips to improve functions and scripts
 	- Let MATLAB help you!
@@ -454,7 +459,7 @@ The last data point doesn't get sorted.
 
 ---
 
-## Efficiency example
+## Efficiency exercise (15 mins)
 
 [Inefficient assignment with loops](code/loopy.m)
 
@@ -470,6 +475,7 @@ The last data point doesn't get sorted.
 [Solution](code/loopy_solution.m)
 
 ---
+class: center, middle
 
 ## Feedback / attendance
 
