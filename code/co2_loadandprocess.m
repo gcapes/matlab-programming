@@ -17,3 +17,6 @@ ylabel('Concentration (ppm)');
 legend('CO_2','Location','NorthWest')
 xlabel('Date')
 title('CO_2 at Mauna Loa, Hawaii')
+xlim(datenum([1970, 2020],1,1));
+ax = gca;
+ax.XTick = datenum(1970:5:2020,1,1);
