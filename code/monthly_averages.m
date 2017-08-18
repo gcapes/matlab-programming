@@ -18,6 +18,7 @@ ylabel ('Concentration (ppb)')
 legend('Processed weekly data','Monthly averages','Location','NorthWest')
 title('CO_2 at Mauna Loa, Hawaii')
 xlabel('Date')
+SetAxisTicks();
 
 % Temperature data
 figure('Name','Averaged temperature')
@@ -28,6 +29,7 @@ legend('Hourly','Monthly averages','Location','NorthWest')
 ylabel('Temperature (\circ C)')
 xlabel('Date')
 title('Temperature at Mauna Loa, Hawaii')
+SetAxisTicks();
 
 %% Time series of averaged data
 figure('Name','Average data time series')
@@ -40,9 +42,18 @@ ylabel('Temperature (\circ C)')
 legend('CO_2','Temperature','Location','NorthWest')
 title('Monthly averaged data time series')
 xlabel('Date')
+SetAxisTicks();
+
 %% Plot scatter to show (hardly any) correlation
 figure('Name','Temp vs CO2 scatterplot')
 scatter(co2Monthly,tempMonthly)
 title('Temp vs CO2 ')
 xlabel('Concentration (ppm)')
 ylabel('Temperature (\circ C)')
+
+%% Set x axis limit and ticks for time series
+function SetAxisTicks()
+    xlim(datenum([1975,2020],1,1))
+    ax = gca;
+    ax.XTick = datenum([1975:5:2020],1,1);
+end
