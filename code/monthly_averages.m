@@ -53,7 +53,7 @@ ylabel('Temperature (\circ C)')
 
 %% Set x axis limit and ticks for time series
 function SetAxisTicks()
-    xlim(datenum([1975,2020],1,1))
+    xlim(datetime([1975,2020],1,1))
     ax = gca;
-    ax.XTick = datenum([1975:5:2020],1,1);
+    ax.XTick = datetime(1975:5:2020,1,1);
 end
