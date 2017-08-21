@@ -9,7 +9,7 @@ Ibackup = I;
 % View image in MATLAB
 imshow(I);
 
-%% Clean up image and crop plot area
+%% Clean up image
 
 % Manually find regions we want to "erase" using data cursor (the text in
 % the plot area).
@@ -31,6 +31,7 @@ I(yRange,xRange,:) = backgroundColour ;
 figure;
 imshow(I);
 
+%% Crop plot area
 % A suitable axis range for new plot might be 1970 - 2020
 % Determine scaling of image using data cursor on the axes:
 % 1960 is at x = 137
@@ -58,12 +59,13 @@ I = I(yRange,xRange,:);
 yRange = [1:5];
 I(yRange,:,:) =  backgroundColour;
 
-% Further tidy up plot, "erasing" leftover sections of axes
+%% Further tidy up plot, "erasing" leftover sections of axes
 I(:,423:441,:) = backgroundColour;
 I(1:5,:,:) = backgroundColour;
 
 imshow(I);
 
+%% Display the cleaned up image and plot our data on top
 % Flip matrix so that y axis origin is at the bottom instead of the top
 I = flipud(I);
 
@@ -71,7 +73,7 @@ I = flipud(I);
 RI = imref2d(size(I));
 RI.XWorldLimits = [1970 2020];
 RI.YWorldLimits = [320 410];
-figure;
+figure('name','Screenshot CO2 data');
 imshow(I,RI);
 set(gca,'YDir','normal');
 daspect([1,2,1]);
@@ -81,4 +83,5 @@ title('CO_2 at Mauna Loa')
 
 % Plot our data on top of image.
 hold on
-plot(co2_decimalyear,co2_conc)  
+plot(co2_decimalyear,co2_conc)
+legend('Our data','location','northwest')
