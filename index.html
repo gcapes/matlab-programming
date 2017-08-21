@@ -269,16 +269,15 @@ and an example of how to use it
 2. Script to automate the above, and clean the temperature data (remove bad data points)
 3. Create (monthly) averages for comparision with other data sets
 	- Check for overlap of data sets
-4. Interrogate subsets of data to look at monthly / yearly variability
-5. Calculate basic statistics
-6. Automate the whole work flow using a function, making some sections optional
-7. Repeat for a different data set (global average surface temperature)
-8. Import screenshot from paper, plot your data on top
+4. Calculate basic statistics for subsets of data to look at monthly / yearly variability
+5. Automate the whole work flow using a function, making some sections optional
+6. Repeat for a different data set (global average surface temperature)
+7. Import screenshot from paper, plot your data on top
 	- clean up original image before adding your data
 
 ---
-## 1. Load a directory of data files
-## Pseudo-code
+### 1. Load a directory of data files
+### Pseudo-code
 - loop through files in directory
 - load data using separate function
 	- generate data loader function from `import data` tool
@@ -286,7 +285,7 @@ and an example of how to use it
 - combine data from files into one array
 
 ---
-## Order of tasks
+### Order of tasks
 1. generate function to load a single data file using `import data` tool
 	- i.e. start with a simplified task
 	- refer to `data/met_README` for explanation of the data format
@@ -299,7 +298,7 @@ and an example of how to use it
 5. ensure the code is adequately commented
 
 ---
-## Data structures
+### Data structures
 - MATLAB treats numeric data and strings as matrices
 	- e.g. `size('test'), size(int8(22))`
 - These can be grouped using data structures
@@ -364,14 +363,28 @@ Average (temperature and CO<sub>2</sub>) data over user-specified intervals for 
 - [Function](code/find_overlap.m) to find time series overlap
 - [Function](code/ts_average.m) to average data
 - [Script](code/monthly_averages.m) to run the above functions and plot the data
----
 
+---
+### 4. Basic stats comparing variability
+1. Monthly stats
+	- Which month of the year contains the highest/lowest CO<sub>2</sub> measurement?
+	- Which month has the highest/lowest average CO<sub>2</sub> concentration?
+	- Which month has the greatest variability?
+2. Yearly stats
+	- Which year has the highest/lowest CO<sub>2</sub> measurement?
+	- Which year has the highest/lowest average CO<sub>2</sub> concentration?
+	- Which year has the greatest variability?
+
+3. Plots
+	- Plot the monthly / yearly mean concentrations.
+
+[Solution](code/co2_stats.m)
+---
 class: center,  middle
 
 # 3. Debugging
 
 ---
-
 ## Approaches
 - Know what outcome you are expecting
 - Explain the problem (possibly to someone else):
@@ -386,7 +399,6 @@ class: center,  middle
 - After fixing, consider adding assertions to prevent recurrence
 
 ---
-
 ## Features of the debugger
 
 - Breakpoints (click on the `-` next to the line number to get a red dot)
@@ -408,7 +420,6 @@ class: center,  middle
 - Override value of variables in scripts and functions
 
 ---
-
 ## Example 1: Data "clipping"
 ### Aim
 We want a script to find the average, sum, number of non-zero cells, and max value of each imported matrix. Then create a four column table showing these results.
@@ -421,7 +432,6 @@ How can we make it build the array without it changing these numbers?
 [The script](debug/clipping.m)
 
 ---
-
 ## Exercise (5 mins)
 - Try to debug the script
 - There are hints on the next slide if you get stuck
