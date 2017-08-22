@@ -47,7 +47,7 @@ SetAxisTicks();
 %% Plot scatter to show (hardly any) correlation
 figure('Name','Temp vs CO2 scatterplot')
 scatter(co2Monthly,tempMonthly)
-title('Temp vs CO2 ')
+title('Temp vs CO2')
 xlabel('Concentration (ppm)')
 ylabel('Temperature (\circ C)')
 
