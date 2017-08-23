@@ -66,22 +66,49 @@ I(1:5,:,:) = backgroundColour;
 imshow(I);
 
 %% Display the cleaned up image and plot our data on top
+% Non-toolbox technique
+
 % Flip matrix so that y axis origin is at the bottom instead of the top
 I = flipud(I);
+close
+figure('Name','CO2 vs screenshot')
+imshow(I);
+axis on
 
-% Scale image to allow plotting on top
-RI = imref2d(size(I));
-RI.XWorldLimits = [1970 2020];
-RI.YWorldLimits = [320 410];
-figure('name','Screenshot CO2 data');
-imshow(I,RI);
+% Set origin of y-axis at the bottom
 set(gca,'YDir','normal');
-daspect([1,2,1]);
-xlabel('Year')
-ylabel('Concentration (ppb)')
-title('CO_2 at Mauna Loa')
 
-% Plot our data on top of image.
+% Use custom ticks and tick labels for axes
+YEAR_MIN = 1970;
+YEAR_MAX = 2020;
+YEAR_RANGE = YEAR_MAX - YEAR_MIN;
+IMAGE_X_MAX = size(I,2);
+xTickPosition = IMAGE_X_MAX / YEAR_RANGE * (0:5:YEAR_RANGE);
+xTickPositionLabel = YEAR_MIN:5:YEAR_MAX;
+xticks(xTickPosition)
+xticklabels(xTickPositionLabel)
+xlim([0,IMAGE_X_MAX])
+
+CONC_MIN = 320;
+CONC_MAX = 410;
+CONC_RANGE = CONC_MAX - CONC_MIN;
+IMAGE_Y_MAX = size(I,1);
+yTickPosition = IMAGE_Y_MAX / CONC_RANGE * (0:10:CONC_RANGE);
+yTickPositionLabel = CONC_MIN:10:CONC_MAX;
+yticks(yTickPosition)
+yticklabels(yTickPositionLabel)
+ylim([0,IMAGE_Y_MAX])
+
+% Remap date and concentration values using image scaling
+co2ConcRemap = IMAGE_Y_MAX * (co2_conc - CONC_MIN) / CONC_RANGE;
+co2DecimalYearRemap = IMAGE_X_MAX * (co2_decimalyear - YEAR_MIN) / YEAR_RANGE;
+
+% Plot our remapped data on top of image.
 hold on
-plot(co2_decimalyear,co2_conc)
-legend('Our data','location','northwest')
+plot(co2DecimalYearRemap,co2ConcRemap)
+
+% Essential labelling
+legend('Our CO_2 data','Location','NorthWest')
+xlabel('Date')
+ylabel('CO_2 concentration')
+title('CO_2 screenshot with data overlayed')
