@@ -36,7 +36,7 @@ class: center, middle
 	- Number types and automatic casting
 	- Scripts and Functions
 	- Flow control
-2. How to write your own scripts and functions (worked examples)
+2. Scripts and functions (worked examples)
 	- Loading data into MATLAB
 	- Processing data in the workspace
 		- Extract sub-sets of data, basic statistics,
@@ -271,9 +271,9 @@ and an example of how to use it
 	- Check for overlap of data sets
 4. Calculate basic statistics for subsets of data to look at monthly / yearly variability
 5. Automate the whole work flow using a function, making some sections optional
-6. Repeat for a different data set (global average surface temperature)
-7. Import screenshot from paper, plot your data on top
+6. Import screenshot from paper, plot your data on top
 	- clean up original image before adding your data
+7. Repeat for a different data set (global average surface temperature)
 
 ---
 ### 1. Load a directory of data files
@@ -379,6 +379,14 @@ Average (temperature and CO<sub>2</sub>) data over user-specified intervals for 
 	- Plot the monthly / yearly mean concentrations.
 
 [Solution](code/co2_stats.m)
+---
+### 6. Import screenshot; plot your data on top
+- You don't always have access to other people's data, but you can still compare your results
+- Take a screenshot and load the image into MATLAB
+- Clean up the image, removing clutter
+- Plot your data on top of the image
+
+[demo](code/LoadMloCo2Image.m)
 ---
 class: center,  middle
 
