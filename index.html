@@ -507,16 +507,6 @@ class: center,  middle
 [clean and fast]: http://uk.mathworks.com/matlabcentral/fileexchange/22943-guidelines-for-writing-clean-and-fast-code-in-matlab
 ---
 
-## Tips and common problems
-- Load data window remains open after loading data (looks like nothing has happened if maximised)
-- Close MATLAB - no prompt to save workspace variables; only modified scripts
-- Variables are implicitly declared so easy to accidentally overwrite
-- Lots of tips, advice, learning resources etc at [Awesome MATLAB]
-
-[Awesome MATLAB]: https://github.com/mikecroucher/awesome-MATLAB
-
----
-
 class: center,  middle
 
 # 5. Efficiency
@@ -557,6 +547,23 @@ class: center,  middle
 - Consider how you will check that your modifications give the same answers as the original code
 
 [Solution](code/loopy_solution.m)
+
+---
+class: center, middle
+
+## 6. Tips and common problems
+---
+## A few words of caution
+- Load data window remains open after loading data (looks like nothing has happened if maximised)
+- Close MATLAB - no prompt to save workspace variables; only modified scripts
+- Variables are implicitly declared so easy to accidentally overwrite
+- It's very easy to create variables / functions using names of existing MATLAB functions
+	- Use `exist` to check so you don't mask built in functions
+
+## Further resources
+Lots of tips, advice, learning resources, etc at [Awesome MATLAB]
+
+[Awesome MATLAB]: https://github.com/mikecroucher/awesome-MATLAB
 
 ---
 class: center, middle
