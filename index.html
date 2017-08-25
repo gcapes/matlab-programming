@@ -503,8 +503,41 @@ class: center,  middle
 5. Program defensively
 	- Expect mistakes and guard against them
 	- Use assertions
+	- Write tests for your functions to ensure they (continue to) work correctly
 
 [clean and fast]: http://uk.mathworks.com/matlabcentral/fileexchange/22943-guidelines-for-writing-clean-and-fast-code-in-matlab
+---
+## Testing
+- Done by means of a separate script which runs your code
+	- Checks that correct output is given for various inputs
+- Some code lends itself better to testing than others
+- Aim to write tests whenever practical
+- Write the tests before writing the function
+	- Reduce confirmation bias
+- Tests help to define the intention of the function
+- Look at the examples on [Cody] for inspiration
+[Cody]: https://www.mathworks.com/matlabcentral/cody/
+
+---
+## [Example]
+#### Determine whether a vector is monotonically increasing
+- Write tests that the function should pass
+	- `assert` that given input should match correct output
+```
+Input  x = [-3 0 7]
+Output tf is true
+Input  x = [2 2]
+Output tf is false
+```
+- Write your function
+- Look at the [test suite] from the web page
+	- Do you agree with the tests?
+	- Are you missing any?
+	- Does your function pass all the tests?
+
+[Solution](code/mono_increase.m)
+[Example]: https://www.mathworks.com/matlabcentral/cody/problems/10-determine-whether-a-vector-is-monotonically-increasing
+[test suite]: code/mono_increase_test.m
 ---
 
 class: center,  middle
