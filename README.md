@@ -31,7 +31,7 @@ Open the [slideshow](https://gcapes.github.io/matlab-programming/)
 	- remove bad data points (spikes, drop-outs, implausible values)
 - Be able to save plots to disk
 - Be able to import a screenshot of a graph from a paper, then plot your data on top
-- Know how to modify trace appearance using handles or right click on trace in figure
+- Know how to modify trace appearance using figure handle and GUI
 	- know about `File > Generate code...` to get script for existing figure
 - Be able to average data onto new time base for comparision
 - Understand how to use the debugger to:

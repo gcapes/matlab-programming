@@ -206,9 +206,6 @@ class: center,  middle
 	- save the code as a script for future use
 	- use the `datetime` function to create a time series
 	- [Example of final script](code/co2_load.m)
-- Plot graph
-	- line of best fit (tools > basic fitting) doesn't work with `datetime` format
-	- plot doesn't update if data is modified
 
 (Data from NOAA: [CO2], [temperature], [metadata for temperature][metadata])
 
@@ -216,9 +213,23 @@ class: center,  middle
 [CO2]: https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html
 [temperature]: https://www.esrl.noaa.gov/gmd/dv/data/?parameter_name=Meteorology&site=MLO&category=Meteorology&frequency=Hourly%2BAverages
 [metadata]: ftp://aftp.cmdl.noaa.gov/data/meteorology/in-situ/README
-
 ---
-
+## Plotting demo and guidelines
+Let's `plot` the loaded data. 
+Give some thought to the presentation of your data: make it self-explanatory.
+- Give your figure a `title`
+- Label your axes using `xlabel` and `ylabel`, specifying units
+- Add a `legend` to label the traces
+- Set appropriate axis limits using `xlim` and `ylim`: round to nice values
+- By default the plot will not update if the data changes - use **Link Plot** button
+- Control figure properties using
+	- Figure context menu - **Show property editor**
+	- Figure handle
+```
+ax = gca;
+ax.YGrid = 'on';
+```
+---
 ## Process CO<sub>2</sub> data
 - Remove bad data values using:
 	- the command line
