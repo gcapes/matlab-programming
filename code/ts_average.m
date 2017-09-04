@@ -4,7 +4,7 @@
 % hfEnd:   high frequency end time stamp
 % hfData:  high frequency data
 % lfStart: low frequency start time stamp
-% lfEnd:   low freequency end time stamp
+% lfEnd:   low frequency end time stamp
 function remapped = ts_average(hfStart,hfEnd,hfData,lfStart,lfEnd)
 
 lfDataLength=length(lfStart);

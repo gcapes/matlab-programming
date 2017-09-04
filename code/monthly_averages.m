@@ -2,11 +2,11 @@
 t_overlap = find_overlap(co2_t,co2_t + caldays(7),met.t,met.t + hours(1));
 
 % Create arrays for start and end time stamps for overlapping time period
-overlaptStart=t_overlap(1):calmonths(1):t_overlap(2);
-overlaptEnd=t_overlap(1)+calmonths(1):calmonths(1):t_overlap(2)+calmonths(1);
+overlaptStart = t_overlap(1):calmonths(1):t_overlap(2);
+overlaptEnd = t_overlap(1)+calmonths(1):calmonths(1):t_overlap(2)+calmonths(1);
 
-co2Monthly=ts_average(co2_t,co2_t+calweeks(1),co2_conc,overlaptStart,overlaptEnd);
-tempMonthly=ts_average(met.t,met.t+hours(1),met.Temperature,overlaptStart,overlaptEnd);
+co2Monthly = ts_average(co2_t,co2_t+calweeks(1),co2_conc,overlaptStart,overlaptEnd);
+tempMonthly = ts_average(met.t,met.t+hours(1),met.Temperature,overlaptStart,overlaptEnd);
 
 %% Plot time series for visual confirmation of correct remapping
 % CO2 data
