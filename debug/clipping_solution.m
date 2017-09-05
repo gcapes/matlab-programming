@@ -12,13 +12,18 @@ load clipping_data.mat
 % double, as we have here), MATLAB will automatically
 % convert some of the types.
 %
-% The original results matrix, A, has the class uint16.
-% The double precision numbers have been converted to unsigned
+% The results array is constructed using square brackets, but contains
+% different variable types i.e.
+% [double, double, double, uint16; double, double, double, uint16]
+%
+% As such, the double precision numbers have been converted to unsigned
 % 16-bit integers.
 % The maximum value for this data type is intmax('uint16')
 % i.e. 2^16 -1 = 65535.
 % Larger values are simply assigned the maximum value this
 % number type can store, so they are clipped at 65535.
+% Converting this array to double afterwards using the double function
+% cannot rescue the situation as the clipping has already occurred.
 
 % Solution:
 % ---------
@@ -53,3 +58,6 @@ F2_3MAX = double(max(F2_3MMAX,[],2));
 
 %% Make summary table
 A = [F2_2M F2_2S F2_2X F2_2MAX ; F2_3M F2_3S F2_3X F2_3MAX];
+
+% Ensure the problem does not recur
+assert(isa(A,'double'))
