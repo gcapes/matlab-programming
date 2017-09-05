@@ -18,7 +18,7 @@ load clipping_data.mat
 % The maximum value for this data type is intmax('uint16')
 % i.e. 2^16 -1 = 65535.
 % Larger values are simply assigned the maximum value this
-% number type can store, so they are clipped at 35535.
+% number type can store, so they are clipped at 65535.
 
 % Solution:
 % ---------
