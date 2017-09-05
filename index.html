@@ -405,21 +405,41 @@ class: center,  middle
 
 ---
 ## Approaches
-- Know what outcome you are expecting
+- Know what output you are expecting
+	- Not always straightforward with scientific code
+	- Use simplified data
+	- Compare actual output against correct output (e.g. manual calculations, previously published material, laws of conservation, expert opinion etc)
+--
+
+- Debug explicitly (don't try to hold it all in your head)
+	- Make and test hypotheses as to what is wrong
+	- Keep a log of input, expected output, and actual output as you make changes to your code
+	- Refine hypotheses based on output from testing
+---
+## Approaches (continued)
 - Explain the problem (possibly to someone else):
 	- Write down what you're trying to do
 		- Consider commenting each line
 		- Does the code do what your comment says it should?
 	- What are the steps to reproduce the problem?
+		- Check for user error
+		- Is your input valid?
+		- Are you using the code correctly?
 	- Create a minimum working example (MWE)
 		- Helps to isolate the error
 		- Easier to debug
 		- Gets a quicker response if you're asking online
 	- Very often the process of explaining the problem leads you to the error
+---
+## Techniques
 - Evaluate small sections of code at a time (one function, one line, one command)
+	- Helps with testing your hypotheses
 - Using intermediate variables in loops can sometimes help debugging
+- Automate testing of hypotheses using assertions
+	- `assert` declares that some condition should be true at a certain point in the program
+	- halts execution if false
 - Revert to previous, working version using [Version Control](https://app.manchester.ac.uk/rgit)
-- After fixing, consider adding assertions to prevent recurrence
+- After fixing, consider adding/keeping assertions to prevent recurrence
 
 ---
 ## Features of the debugger
