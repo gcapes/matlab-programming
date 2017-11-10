@@ -1,8 +1,9 @@
-% badtonan replaces data points less than a value with NaN
-% Example usage: co2ppm=badtonan(co2_raw,0);
-function [fixed]=badtonan(data,threshold)
+% BADTONAN replaces data points less than a threshold value with NaN
+% Usage:
+% goodData = badtonan(rawData, implausiblyLowValue)
+function [cleaned] = badtonan(rawData,threshold)
     % Copy the raw data
-    fixed=data;
+    cleaned = rawData;
     % Replace values less than threshold with NaN
-    fixed(data<threshold)=NaN;
+    cleaned(cleaned < threshold) = NaN;
 end
