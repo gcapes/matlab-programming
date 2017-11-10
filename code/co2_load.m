@@ -42,12 +42,12 @@ fclose(fileID);
 % script.
 
 %% Allocate imported array to column variable names
-co2_year = dataArray{:, 1};
-co2_month = dataArray{:, 2};
-co2_day = dataArray{:, 3};
-co2_decimalyear = dataArray{:, 4};
-co2_conc = dataArray{:, 5};
-co2_increase1800 = dataArray{:, 6};
+co2Year = dataArray{:, 1};
+co2Month = dataArray{:, 2};
+co2Day = dataArray{:, 3};
+co2DecimalYear = dataArray{:, 4};
+co2Conc = dataArray{:, 5};
+co2Increase1800 = dataArray{:, 6};
 
 
 %% Clear temporary variables

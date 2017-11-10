@@ -4,15 +4,15 @@
 co2_load;
 
 % Back up raw data
-co2_conc_raw=co2_conc;
+co2ConcRaw = co2Conc;
 % Remove bad data points
-co2_conc=badtonan(co2_conc_raw,0);
+co2Conc = badtonan(co2ConcRaw,0);
 
 % Create time series
-co2_t = datetime(co2_year,co2_month,co2_day);
+co2Time = datetime(co2Year,co2Month,co2Day);
 
 % Plot time series
-plot(co2_t,co2_conc);
+plot(co2Time,co2Conc);
 ylabel('Concentration (ppm)');
 legend('CO_2','Location','NorthWest')
 xlabel('Date')
