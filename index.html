@@ -239,7 +239,7 @@ code/  data/  debug/  guide.md	index.html  README.md
 	- treatment of repeated delimiters
 	- starting row
 	- specific columns
-	- data format
+	- data format (use column vectors)
 	- variable names
 - Tips:
 	- use `exist` and `isvarname` to help choose variable names
@@ -318,9 +318,9 @@ and an example of how to use it
 
 ---
 ## Example functions (demo/exercise)
-1. Load a folder of data files into MATLAB, creating one time series per variable
+1. Load a folder of data files (`data/met_mlo_insitu_1_obop_hour_*.txt`) into MATLAB, creating one time series per variable
 (rather than one per file)
-2. Script to automate the above, and clean the temperature data (remove bad data points)
+2. Write a script to automate (1.) above, and clean the temperature data (remove bad data points)
 3. Create (monthly) averages for comparision with other data sets
 	- Check for overlap of data sets
 4. Calculate basic statistics for subsets of data to look at monthly / yearly variability
