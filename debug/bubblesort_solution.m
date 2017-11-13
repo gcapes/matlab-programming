@@ -1,4 +1,4 @@
-% bubblesort A demo function to sort an array
+% BUBBLESORT A demo function to sort an array
 % Contains an error for learners to find using the debugger
 % Example usage:
 % sortedA = bubblesort(rand(100,1));
