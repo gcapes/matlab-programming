@@ -24,12 +24,12 @@ function [overlap] = find_overlap (ts1_start,ts1_end,ts2_start,ts2_end)
     assert( mono1a && mono1b && mono2a && mono2b , 'Error. Time series should be monotonic.')
     
     t1_start = ts1_start(1);
-    t1_end = ts1_end(end);
+    t1_end   = ts1_end(end);
     t2_start = ts2_start(1);
-    t2_end = ts2_end(end);
+    t2_end   = ts2_end(end);
     
     t_start = max(t1_start,t2_start);
-    t_end = min(t1_end,t2_end);
+    t_end   = min(t1_end,t2_end);
     
     overlap = [t_start,t_end];
 end
