@@ -149,7 +149,31 @@ intmax('uint8')          % Now returns an error
 - Chose descriptive names which don't mask built-in functions
 	- use `exist` to check
 - Demo
+---
+## Data types
+- Standard array variables must contain only one type of data
+	- e.g. a matrix of doubles, a vector of strings, a vector of logicals etc
+- Attempting to assign a different type to an existing variable can give confusing results
+(from automatic type casting)
+```
+>> a = ones(5,1)
+>> a(3) = 'x'
+```
+- Use cell arrays to store a mix of data types in one container
+```
+>> myCell = {'hello', 2e8, true; [3,2,1], rand(5),[false,true]}
+myCell =
+  2×3 cell array
+    'hello'         [ 200000000]    [          1]
+    [1×3 double]    [5×5 double]    [1×2 logical]
+```
+- Group related variables into one 'container' using structures or tables
+	- these can be much neater than individual variables
+	- depends on the structure of your data
+- See [data types] and [MATLAB classes] for guidance on usage of different data types
 
+[data types]: https://uk.mathworks.com/help/matlab/data-types_data-types.html
+[MATLAB classes]: https://uk.mathworks.com/help/matlab/matlab_prog/fundamental-matlab-classes.html
 ---
 
 ## Scripts and functions
@@ -295,7 +319,6 @@ ax.YGrid = 'on';
 [script]: code/co2_clean.m
 [badtonan.m]: code/badtonan.m
 [co2_loadandprocess.m]: code/co2_loadandprocess.m
-
 ---
 
 ## A method for writing functions
@@ -355,14 +378,7 @@ and an example of how to use it
 - MATLAB treats numeric data and strings as matrices
 	- e.g. `size('test'), size(int8(22))`
 - These can be grouped using data structures
-	- Cell arrays for flexible data storage of multiple data types
-```
->> myCell = {1,2,3,4;'example',rand(3,3,2),[3,2,1],{5,6,7}}
->> myCell{2,1}
-ans =
-example
-```
-	- Structures for named fields containing values
+	- Named fields containing values
 ```
 >> myStruct.name='My first structure';
 >> myStruct.data=ones(10)
