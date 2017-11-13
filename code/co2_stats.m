@@ -6,13 +6,13 @@ monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov",
 % Filter data to get monthly statistics
 for i = 1:12
     % Find indices matching each calendar month
-    idx = month(co2_t) == i;
+    idx = month(co2Time) == i;
     
     % Assign results
-    co2MonthlyMean(i) = mean(co2_conc(idx),'omitnan');
-    co2MonthlyStd(i)  = std(co2_conc(idx),'omitnan');
-    co2MonthlyMin(i)  = min(co2_conc(idx));
-    co2MonthlyMax(i)  = max(co2_conc(idx));
+    co2MonthlyMean(i) = mean(co2Conc(idx),'omitnan');
+    co2MonthlyStd(i)  = std(co2Conc(idx),'omitnan');
+    co2MonthlyMin(i)  = min(co2Conc(idx));
+    co2MonthlyMax(i)  = max(co2Conc(idx));
 end
 
 co2MonthlyRange = co2MonthlyMax - co2MonthlyMin;
@@ -55,15 +55,15 @@ nYears = endYear - startYear + 1;
 [co2YearlyMean, co2YearlyStd, co2YearlyMin, co2YearlyMax] = deal(zeros(nYears,1));
 for i = co2YearlyIndex
     % Find indices matching each year
-    idx = year(co2_t) == i;
+    idx = year(co2Time) == i;
     
     % Start filling the array from the first row rather than the row of the
     % year, to avoid the first 1974 rows containing no data.
     statsRow = i - (startYear-1);
-    co2YearlyMean(statsRow) = mean(co2_conc(idx),'omitnan');
-    co2YearlyStd(statsRow)  = std(co2_conc(idx),'omitnan');
-    co2YearlyMin(statsRow)  = min(co2_conc(idx));
-    co2YearlyMax(statsRow)  = max(co2_conc(idx));
+    co2YearlyMean(statsRow) = mean(co2Conc(idx),'omitnan');
+    co2YearlyStd(statsRow)  = std(co2Conc(idx),'omitnan');
+    co2YearlyMin(statsRow)  = min(co2Conc(idx));
+    co2YearlyMax(statsRow)  = max(co2Conc(idx));
 end
 
 [co2HighestYearlyMean, co2YearWithHighestMean] = max(co2YearlyMean);
