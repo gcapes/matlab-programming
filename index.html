@@ -258,8 +258,9 @@ code/  data/  debug/  guide.md	index.html  README.md
 ```
 ---
 ## Import CO<sub>2</sub> data from text file
-
-- Load the CO<sub>2</sub> [data file] (`data/co2_weekly_mlo.txt`), using the `Import Data` tool to select:
+- Inspect the CO<sub>2</sub> [data file] (`data/co2_weekly_mlo.txt`) with a text editor (e.g. notepad++)
+and note the format of the data
+- Load the file into MATLAB using the `Import Data` tool to select:
 	- column delimiters
 	- treatment of repeated delimiters
 	- starting row
@@ -269,7 +270,7 @@ code/  data/  debug/  guide.md	index.html  README.md
 - Tips:
 	- use `exist` and `isvarname` to help choose variable names
 	- import window remains open
-	- save the code as a script for future use
+	- save the code as a script in your `code` directory for future use
 	- use the `datetime` function to create a time series
 	- [Example of final script](code/co2_load.m)
 
@@ -289,7 +290,7 @@ Give some thought to the presentation of your data: make it self-explanatory.
 - Set appropriate axis limits using `xlim` and `ylim`: round to nice values
 - By default the plot will not update if the data changes - use **Link Plot** button
 - Control figure properties using
-	- Figure context menu - **Show property editor**
+	- **Edit plot** (select) tool, then figure context menu - **Show property editor**
 	- Figure handle
 ```
 ax = gca;

@@ -1,5 +1,5 @@
-%% Process data
+%% Remove bad data points from CO2 data
 % back up raw co2 data
-co2_raw=co2ppm;
+co2Raw = co2Conc;
 % remove bad data points
-co2ppm(co2ppm<0)=nan;
+co2Conc(co2Conc<0) = nan;
