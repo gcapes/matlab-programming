@@ -1,5 +1,5 @@
 function met = met_loadfolder(filespec)
-	% loadfolder Load text files in the current folder matching filespec
+	% met_loadfolder Load text files in the current folder matching filespec
 	% Example usage:
 	%     met = met_loadfolder('data/met_mlo*.txt');
 	
@@ -11,10 +11,10 @@ function met = met_loadfolder(filespec)
 	met = struct;
 	
 	% Loop through files, calling data loader on each of them.
-	for i=1:nfiles
+	for i = 1:nfiles
 		fileName = dirinfo(i).name;
 		filePath = dirinfo(i).folder;
-		file = strcat(filePath,'/',fileName);
+		file = fullfile(filePath,fileName);
 		met = met_importfile(file,i,met);
 	end
 end
