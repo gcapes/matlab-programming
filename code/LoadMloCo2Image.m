@@ -99,7 +99,7 @@ ylim([0,IMAGE_Y_MAX])
 
 % Remap date and concentration values using image scaling
 co2ConcRemap = IMAGE_Y_MAX * (co2_conc - CONC_MIN) / CONC_RANGE;
-co2DecimalYearRemap = IMAGE_X_MAX * (co2_decimalyear - YEAR_MIN) / YEAR_RANGE;
+co2DecimalYearRemap = IMAGE_X_MAX * (co2DecimalYear - YEAR_MIN) / YEAR_RANGE;
 
 % Plot our remapped data on top of image.
 hold on
