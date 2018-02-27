@@ -56,8 +56,6 @@ concMin = 414;              % y value for 320
 concMax = 63;               % y value for 410
 yRange = [concMax:concMin];
 I = I(yRange,xRange,:);
-yRange = [1:5];
-I(yRange,:,:) =  backgroundColour;
 
 %% Further tidy up plot, "erasing" leftover sections of axes
 I(:,423:441,:) = backgroundColour;
