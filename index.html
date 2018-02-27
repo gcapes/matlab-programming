@@ -29,7 +29,7 @@ class: middle
 ### Initial tasks:
 1. Log into a PC
 2. Start MATLAB
-3. Open the course notes
+3. Open the course materials using the URL above
 	- They contain a link to this slideshow
 
 
@@ -265,17 +265,18 @@ class: center,  middle
 ## Download files for worked examples
 
 - Download [zip file](matlab-course-files.zip)
-- URL for these slides: https://github.com/gcapes/matlab-programming
+- URL for these slides: https://gcapes.github.io/matlab-programming/
 - Extract zip file (don't just double click on it)
 - Change your current folder in MATLAB to the **matlab-programming** folder you just extracted
 ```
 >> ls -F
 code/  data/  debug/
 ```
+- Put up your green sticky note when done
 ---
 ## Import CO<sub>2</sub> data from text file
 - Inspect the CO<sub>2</sub> [data file] (`data/co2_weekly_mlo.txt`) with a text editor (e.g. notepad++)
-and note the format of the data
+and note the format of the data (multiple-space delimited)
 - Load the file into MATLAB using the `Import Data` tool to select:
 	- column delimiters
 	- treatment of repeated delimiters
@@ -286,9 +287,10 @@ and note the format of the data
 - Tips:
 	- use `exist` and `isvarname` to help choose variable names
 	- import window remains open
-	- save the code as a script in your `code` directory for future use
-	- use the `datetime` function to create a time series
+	- generate a script using the `Import Data` tool and save it in your `code` directory for future use
 	- [Example of final script](code/co2_load.m)
+- Use the `datetime` function to create a time series
+- Clear all variables and reload the data using your script
 
 (Data from NOAA: [CO2], [temperature], [metadata for temperature][metadata])
 
@@ -380,7 +382,7 @@ and an example of how to use it
 
 ---
 ### Order of tasks
-1. generate function to load a single data file using `import data` tool
+1. generate function to load a single data file into column vectors using `import data` tool
 	- i.e. start with a simplified task
 	- refer to `data/met_README` for explanation of the data format
 2. edit the file loader function (1.) to automatically generate variable names
@@ -413,12 +415,13 @@ myStruct.('demo') = 'Like this!'
 ### Hints
 - Can't dynamically assign variable names in MATLAB
 	- Modify function to output a structure
+	- Use one row in structure per file
 - Output argument overwrites variables in workspace
 	- Pass in variable to function, modify, then pass it back out
-- Can only pass in a variable which exists
+- Can only pass in a variable which exists (c.f. variable assignment)
 	- Create empty variable before first function call
 
-### Solutions
+### Solutions (1 - 3)
 - [Function](code/met_importfile.m) to load a single met file
 - [Function](code/met_loadfolder.m) to load a directory of files
 
@@ -549,7 +552,7 @@ When the last step creates the matrix from the elements, any value above 65535 b
 
 How can we make it build the array without it changing these numbers?
 
-[The script](debug/clipping.m)
+You should already have the script in: `debug/clipping.m`
 
 ---
 ## Exercise (5 mins)
@@ -579,7 +582,7 @@ Sort input array using the [bubble sort](https://en.wikipedia.org/wiki/Bubble_so
 ### The problem
 The last data point doesn't get sorted.
 
-[The bubblesort function](debug/bubblesort.m)
+The bubblesort function: `debug/bubblesort.m`
 
 ---
 
@@ -670,7 +673,7 @@ class: center,  middle
 - Use the profiler to identify hotspots in code
 - Many more tips at [Awesome MATLAB], particularly [clean and fast] and [vectorisation]
 
-[Efficiency demo](code/efficiency_examples.m)
+Efficiency demo: `code/efficiency_examples.m`
 
 [Awesome MATLAB]: https://github.com/mikecroucher/awesome-MATLAB
 [clean and fast]: http://uk.mathworks.com/matlabcentral/fileexchange/22943-guidelines-for-writing-clean-and-fast-code-in-matlab
@@ -680,7 +683,7 @@ class: center,  middle
 
 ## Efficiency exercise (15 mins)
 
-[Inefficient assignment with loops](code/loopy.m)
+Inefficient assignment with loops: `code/loopy.m`
 
 - Look at advice from `mlint` (down the side of the editor window)
 - Use the profiler (`Run and time` button) to identify expensive code sections
