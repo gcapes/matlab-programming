@@ -682,7 +682,7 @@ Efficiency demo: `code/efficiency_examples.m`
 
 ---
 
-## Efficiency exercise (15 mins)
+## Optimisation exercise (15 mins)
 
 Inefficient assignment with loops: `code/loopy.m`
 
@@ -698,6 +698,24 @@ Inefficient assignment with loops: `code/loopy.m`
 [Solution](code/loopy_solution.m)
 
 ---
+
+## Additional optimisation techniques
+
+- Use third-party code
+	- e.g. [NAG toolbox] for MATLAB
+- Use MATLAB MEX functions
+	- i.e. rewrite functions in Fortran or C
+- MATLAB parallel computing toolbox
+	- `parfor` and `spmd` utilise multicore processors
+- Split your work into separate computations
+	- e.g. [Condor] pool, job array on [CSF]
+
+[NAG toolbox]: https://www.applications.itservices.manchester.ac.uk/show_product.php?id=307
+[Condor]: http://ri.itservices.manchester.ac.uk/htccondor/
+[CSF]: http://ri.itservices.manchester.ac.uk/csf/
+
+---
+
 class: center, middle
 
 # 6. Tips and common problems
