@@ -5,7 +5,7 @@ Programming in MATLAB (worked examples)
 
 [Register for the course](https://app.manchester.ac.uk/rmatlabpro)
 
-[Leave feedback](https://goo.gl/forms/zfZyTLw4DDaySnCF3)
+[Leave feedback](https://docs.google.com/forms/d/e/1FAIpQLSdfpd8QuG9SPAehY5PBJ7AQdbH_eQcDL0UNbS2Oqs6960BTww/viewform?usp=pp_url&entry.1427428485&entry.1759822899&entry.1444288709=Programming+in+MATLAB&entry.1409009513&entry.160472735&entry.2083518247&entry.92324155)
 
 Open the [slideshow](https://gcapes.github.io/matlab-programming/)
 
